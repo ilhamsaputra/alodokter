@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="Pxd-Xw-GEq">
+            <objects>
+                <viewController id="gjI-J6-vmk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WZu-gc-I6N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OKV-vS-7H2"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" landscapeImage="profile" id="wYQ-QS-LGi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J0x-2d-ZDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="419" y="498"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Dhb-9m-7qv">
+            <objects>
+                <viewController id="pmw-aN-fiA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lPk-O6-Wys">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kLD-fY-d6S"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" landscapeImage="home" id="uRV-ZS-wid"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yf1-g0-xgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="419" y="-167"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pXQ-ae-KN5">
+            <objects>
+                <tabBarController id="WEN-AN-gEb" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Gu-v1-seY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pmw-aN-fiA" kind="relationship" relationship="viewControllers" id="oJM-hd-4oI"/>
+                        <segue destination="gjI-J6-vmk" kind="relationship" relationship="viewControllers" id="0Ub-eO-Q31"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhI-bg-YGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-535" y="166"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home" width="24" height="24"/>
+        <image name="profile" width="24" height="24"/>
+    </resources>
+</document>
