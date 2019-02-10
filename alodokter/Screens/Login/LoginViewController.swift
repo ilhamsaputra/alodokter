@@ -30,15 +30,11 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func randomPhone() -> String {
-        return String(Int.random(in: 1000000000 ..< 9999999999))
-    }
-
     @IBAction func onButtonLoginPressed(_ sender: Any) {
         if textEmail.validateNotEmpty() && textPassword.validateNotEmpty(){
             ud.email = textEmail.text
             ud.password = textPassword.text
-            ud.phone = "+628\(randomPhone())"
+            ud.phone = "+628\(Tools.randomPhone())"
             ud.isLogin = true
             ud.save()
             presentMainNavigation(selectedTab: 0)

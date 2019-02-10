@@ -20,7 +20,7 @@ class Tools: NSObject {
     }
     
     
-    static func showYesNoAlert(title: String = "Confirmation", message: String, onYes:(()->())?=nil, onNo:(()->())?=nil) {
+    static func showYesNoAlert(title: String = "Konfirmasi", message: String, onYes:(()->())?=nil, onNo:(()->())?=nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         alertController.addAction(UIAlertAction(title: "Ya", style: .default, handler: { (action) in
@@ -32,6 +32,10 @@ class Tools: NSObject {
         }))
         
         alertController.show()
+    }
+    
+    static func randomPhone() -> String {
+        return String(Int.random(in: 1000000000 ..< 9999999999))
     }
     
 }

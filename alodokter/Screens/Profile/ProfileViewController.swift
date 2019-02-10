@@ -49,8 +49,11 @@ class ProfileViewController: UIViewController {
     
     
     @IBAction func onButtonKeluarPressed(_ sender: Any) {
-        ud.isLogin = false
-        ud.save()
-        presentLoginNavigation()
+        Tools.showYesNoAlert(title: "Konfrimasi", message: "Apakah Anda ingin keluar ?", onYes: {
+            self.ud.isLogin = false
+            self.ud.save()
+            self.presentLoginNavigation()
+        }) {
+        }
     }
 }
